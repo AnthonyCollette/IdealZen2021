@@ -1,0 +1,76 @@
+@keyframes leaf1 {
+    0% {
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 100%;
+    }
+}
+
+@keyframes leaf2 {
+    0% {
+        transform: rotate(20deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 100%;
+    }
+}
+
+@keyframes leaf3 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 25%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes leaf4 {
+    0% {
+        transform: rotate(-20deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 100%;
+    }
+}
+
+@keyframes leaf5 {
+    0% {
+        transform: rotate(-20deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 100%;
+    }
+}
+
+@keyframes ellipse {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

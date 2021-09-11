@@ -1,0 +1,102 @@
+header {
+    background-color: $color-006;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/essaie-fond.png');
+        width: 100%;
+        height: 272px;
+        top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo-wrapper {
+        position: relative;
+        min-width: 600px;
+        min-height: 600px;
+        img {
+            position: absolute;
+            bottom: 30%;
+        }
+        .leaf-1 {
+            left: 40%;
+            z-index: 2;
+            transform-origin: bottom right;
+            animation: 2s ease-in-out leaf1;
+        }
+        .leaf-2 {
+            left: 44%;
+            bottom: 33%;
+            z-index: 3;
+            transform-origin: bottom right;
+            animation: 2s ease-in-out leaf2;
+        }
+        .leaf-3 {
+            left: 50%;
+            bottom: 41%;
+            z-index: 2;
+            animation: 2s ease-in-out leaf3;
+        }
+        .leaf-4 {
+            left: 50.5%;
+            bottom: 33%;
+            z-index: 3;
+            transform-origin: bottom left;
+            animation: 2s ease-in-out leaf4;
+        }
+        .leaf-5 {
+            left: 52%;
+            z-index: 2;
+            transform-origin: bottom left;
+            animation: 2s ease-in-out leaf5;
+        }
+        .ellipse {
+            left: 44%;
+            bottom: 33%;
+            animation: 1.5s ease-in-out ellipse;
+        }
+        .text-logo {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+        }
+    }
+}
+
+.soins {
+    margin-top: 40%;
+    .text-wrapper {
+        position: relative;
+        background-color: $color-005;
+        padding: 55px 70px;
+        max-width: 50%;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 950px;
+            height: 645px;
+            border: 3px solid $color-007;
+            bottom: -13%;
+            left: 80%;
+            z-index: -2;
+        }
+        h1 {
+            position: absolute;
+            bottom: 100%;
+            right: 18.5%;
+            .white-text {
+                color: $color-001;
+            }
+        }
+        p:first-of-type {
+            margin-bottom: 20px;
+        }
+        img {
+            position: absolute;
+            left: 70%;
+            bottom: -30%;
+            z-index: -1;
+        }
+    }
+}

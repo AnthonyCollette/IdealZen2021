@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@-webkit-keyframes leaf1 {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+@keyframes leaf1 {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes leaf2 {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@keyframes leaf2 {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes leaf3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 25%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes leaf3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 25%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes leaf4 {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@keyframes leaf4 {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes leaf5 {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@keyframes leaf5 {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes ellipse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes ellipse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+* {
+  margin: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1640px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Amatic SC";
+  font-size: 55px;
+  color: #707070;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-size: 21px;
+  color: #ffffff;
+}
+
+nav {
+  background-color: #f2e7d6;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px 0;
+}
+
+nav .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .container ul li {
+  margin-left: 50px;
+}
+
+nav .container ul a {
+  color: #929c72;
+  font-size: 21px;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  background-color: #f9f4ec;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  background-image: url("../../images/essaie-fond.png");
+  width: 100%;
+  height: 272px;
+  top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .logo-wrapper {
+  position: relative;
+  min-width: 600px;
+  min-height: 600px;
+}
+
+header .logo-wrapper img {
+  position: absolute;
+  bottom: 30%;
+}
+
+header .logo-wrapper .leaf-1 {
+  left: 40%;
+  z-index: 2;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-animation: 2s ease-in-out leaf1;
+          animation: 2s ease-in-out leaf1;
+}
+
+header .logo-wrapper .leaf-2 {
+  left: 44%;
+  bottom: 33%;
+  z-index: 3;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-animation: 2s ease-in-out leaf2;
+          animation: 2s ease-in-out leaf2;
+}
+
+header .logo-wrapper .leaf-3 {
+  left: 50%;
+  bottom: 41%;
+  z-index: 2;
+  -webkit-animation: 2s ease-in-out leaf3;
+          animation: 2s ease-in-out leaf3;
+}
+
+header .logo-wrapper .leaf-4 {
+  left: 50.5%;
+  bottom: 33%;
+  z-index: 3;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-animation: 2s ease-in-out leaf4;
+          animation: 2s ease-in-out leaf4;
+}
+
+header .logo-wrapper .leaf-5 {
+  left: 52%;
+  z-index: 2;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-animation: 2s ease-in-out leaf5;
+          animation: 2s ease-in-out leaf5;
+}
+
+header .logo-wrapper .ellipse {
+  left: 44%;
+  bottom: 33%;
+  -webkit-animation: 1.5s ease-in-out ellipse;
+          animation: 1.5s ease-in-out ellipse;
+}
+
+header .logo-wrapper .text-logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.soins {
+  margin-top: 40%;
+}
+
+.soins .text-wrapper {
+  position: relative;
+  background-color: #929c72;
+  padding: 55px 70px;
+  max-width: 50%;
+}
+
+.soins .text-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 950px;
+  height: 645px;
+  border: 3px solid #c0ce3c;
+  bottom: -13%;
+  left: 80%;
+  z-index: -2;
+}
+
+.soins .text-wrapper h1 {
+  position: absolute;
+  bottom: 100%;
+  right: 18.5%;
+}
+
+.soins .text-wrapper h1 .white-text {
+  color: #ffffff;
+}
+
+.soins .text-wrapper p:first-of-type {
+  margin-bottom: 20px;
+}
+
+.soins .text-wrapper img {
+  position: absolute;
+  left: 70%;
+  bottom: -30%;
+  z-index: -1;
+}
+
+footer {
+  background-image: url("../../images/footer.png");
+  width: 100%;
+  height: 383px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 250px;
+}
