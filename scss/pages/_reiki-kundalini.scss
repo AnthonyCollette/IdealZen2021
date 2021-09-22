@@ -1,0 +1,86 @@
+.kundalini {
+    padding: 90px 0 200px 0;
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            background-color: $color-005;
+            position: relative;
+            padding: 20px 100px;
+            width: fit-content;
+            width: -moz-fit-content;
+            margin: 30px auto 0;
+            display: block;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border: 3px solid $color-009;
+                left: 3%;
+                bottom: 10%;
+                z-index: -1;
+            }
+        }
+        .religion {
+            max-width: 47%;
+            margin: 75px auto;
+            p {
+                font-size: $font-md;
+                color: $color-003;
+                font-family: $font-001;
+                font-style: italic;
+                max-width: 100%;
+                @include min($xxl) {
+                    font-size: $font-lg;
+                }
+            }
+        }
+        p {
+            font-size: $font-md;
+            color: $color-003;
+            font-family: $font-001;
+            max-width: 80%;
+            text-align: center;
+            @include min($xxl) {
+                font-size: $font-lg;
+            }
+            &:last-of-type {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+.kundalini-formations {
+    background-color: $color-006;
+    padding: 50px 0 130px 0;
+    > img {
+        display: block;
+        width: 300px;
+        margin: 0 auto 50px;
+    }
+    &__text-wrapper {
+        max-width: 40%;
+        background-color: $color-005;
+        padding: 45px 80px;
+        position: relative;
+        margin: 0 auto;
+        &--buttons-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 100%;
+            margin-top: 50px;
+            color: $color-001;
+            font-size: $font-lg;
+            font-family: $font-001;
+            span {
+                font-size: $font-md;
+                @include min($xl) {
+                    font-size: $font-lg;
+                }
+            }
+        }
+    }
+}

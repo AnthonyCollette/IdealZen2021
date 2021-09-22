@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ideal Zen</title>
-        <link href="https://www.dafontfree.net/embed/YnJpdGFubmljLWJvbGQtcmVndWxhciZkYXRhLzEzL2IvNjQ1MzAvQlJJVEFOSUMuVFRG" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" />
@@ -17,20 +17,45 @@
                 <div class="nav-brand">
                     <img src="/images/logo.svg" alt="logo Ideal Zen" />
                 </div>
-                <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">Accompagnements </a></li>
-                    <li><a href="">Formations</a></li>
-                    <li><a href="">Présentations</a></li>
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">Actu</a></li>
-                    <li><a href="">Déontologie et éthique</a></li>
-                </ul>
+                <div class="desktop-nav">
+                    <ul class="desktop-nav__items">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="accompagnements.html">Accompagnements </a></li>
+                        <li class="menu-formations" id="menu-formations">
+                            <span>Formations</span>
+                            <div class="sub-formations" id="sub-formations"><a href="reiki-usui.html">Formation Reiki Usui</a><a href="reiki-kundalini.html">Formation Reiki Kundalini</a><a href="voie-du-silence.html">Formation Voie du Silence</a></div>
+                        </li>
+                        <li><a href="presentation.html">Présentation</a></li>
+                        <li><a href="">Articles</a></li>
+                        <li><a href="">Actu</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-nav">
+                    <button class="mobile-nav__burger-button" id="burger-btn">
+                        <div class="mobile-nav__burger-button--line line1" id="line1"></div>
+                        <div class="mobile-nav__burger-button--line line2" id="line2"></div>
+                        <div class="mobile-nav__burger-button--line line3" id="line3"></div>
+                    </button>
+                    <ul class="mobile-nav__items" id="mobile-nav__items">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="accompagnements.html">Accompagnements </a></li>
+                        <li class="menu-formations" id="menu-formations-mobile">
+                            <span>Formations</span>
+                            <div class="sub-formations sub-formations-mobile" id="sub-formations-mobile"><a href="">Formation Reiki Usui</a><a href="">Formation Reiki Kundalini</a><a href="">Formation Voie du Silence</a></div>
+                        </li>
+                        <li><a href="">Présentations</a></li>
+                        <li><a href="">Articles</a></li>
+                        <li><a href="">Actu</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <header>
+        <header class="header">
             <div class="container">
-                <div class="logo-wrapper">
+                <div class="header__quote"><q class="header__quote--text">Le plus grand secret pour le bonheur, c'est d'être bien avec soi</q> <span class="header__quote--author">Fontenelle</span></div>
+                <div class="header__logo-wrapper">
                     <img src="./images/Groupe 4.png" alt="Feuille de lotus" class="leaf-1" id="leaf-1" />
                     <img src="./images/Groupe 1.png" alt="Feuille de lotus" class="leaf-2" id="leaf-2" />
                     <img src="./images/Groupe 3.png" alt="Feuille de lotus" class="leaf-3" id="leaf-3" />
@@ -38,10 +63,11 @@
                     <img src="./images/Groupe 5.png" alt="Feuille de lotus" class="leaf-5" id="leaf-5" />
                     <img src="./images/Ellipse 1.png" alt="Ellipse" class="ellipse" id="ellipse" />
                     <span class="text-logo">Ideal Zen</span>
+                    <a href="#soins" class="hands-logo"><img src="./images/hands.png" alt="Mains" /></a>
                 </div>
             </div>
         </header>
-        <section class="soins">
+        <section class="soins" id="soins">
             <div class="container">
                 <div class="text-wrapper">
                     <h1>Soins énerg<span class="white-text">étiques</span></h1>
@@ -50,10 +76,13 @@
                         épanouie, en cohérence avec vos aspirations profondes....
                     </p>
                     <p>Pour des soins ponctuels ou pour un suivi plus long, je vous accompagne sur la voie du bien-être et de l'auto-guérison, ce chemin si précieux et unique qui mène vers vous-mêmes !</p>
-                    <img src="./images/photo.png" alt="Femme dans un champ" />
+                    <div class="img-wrapper">
+                        <div class="img"><img src="./images/photo.png" alt="Femme dans un champ" /></div>
+                    </div>
                 </div>
             </div>
         </section>
         <footer></footer>
+        <script src="./js/nav.js"></script>
     </body>
 </html>

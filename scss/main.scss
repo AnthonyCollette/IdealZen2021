@@ -1,9 +1,15 @@
 @import 'utils/variables';
+@import 'utils/mixins';
 @import 'utils/animations';
 @import 'base/general';
 @import 'base/fonts';
-@import 'utils/mixins';
+@import 'composants/buttons';
 @import 'base/typographies';
 @import 'layout/nav';
 @import 'pages/home';
 @import 'layout/footer';
+@import 'pages/accompagnements';
+@import 'pages/reiki-usui';
+@import 'pages/reiki-kundalini';
+@import 'pages/voie-du-silence';
+@import 'pages/presentations';

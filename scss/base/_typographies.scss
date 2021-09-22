@@ -1,11 +1,68 @@
 h1 {
     font-family: $font-003;
+    font-size: $font-xxl;
+    color: $color-003;
+    @include min($sm) {
+        font-size: $font-xxxl;
+    }
+}
+
+.h1 {
+    display: flex;
+    align-items: center;
+    &::after {
+        content: '';
+        background-image: url('../../images/Groupe\ 5.png');
+        display: inline-block;
+        background-size: cover;
+        transform: rotate(-10deg);
+        width: 70px;
+        height: 65px;
+    }
+}
+
+h2 {
+    font-family: $font-002;
+    font-size: $font-xxl;
+    color: $color-001;
+}
+h2.big {
+    font-size: $font-xxl;
+    @include min($xl) {
+        font-size: $font-xxxl;
+    }
+}
+
+h3 {
+    font-family: $font-002;
     font-size: $font-xxxl;
+    color: $color-007;
+}
+
+h4 {
+    font-family: $font-001;
+    font-size: $font-lg;
+    color: $color-001;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: $font-lg;
+    font-family: $font-002;
+    color: $color-001;
+}
+
+h6 {
+    font-size: $font-lg;
+    font-family: $font-002;
     color: $color-003;
 }
 
 p {
     font-family: $font-001;
-    font-size: $font-lg;
+    font-size: $font-md;
     color: $color-001;
+    @include min($xxl) {
+        font-size: $font-lg;
+    }
 }

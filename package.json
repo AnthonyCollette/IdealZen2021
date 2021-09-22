@@ -1,0 +1,22 @@
+{
+  "name": "idealzen2021",
+  "version": "1.0.0",
+  "description": "IdealZen2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyCollette/IdealZen2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyCollette/IdealZen2021/issues"
+  },
+  "homepage": "https://github.com/AnthonyCollette/IdealZen2021#readme",
+  "devDependencies": {
+    "aos": "^2.3.4"
+  }
+}

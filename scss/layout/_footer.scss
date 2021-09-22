@@ -4,5 +4,8 @@ footer {
     height: 383px;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 250px;
+}
+
+footer.colored-bg {
+    background-color: $color-006;
 }

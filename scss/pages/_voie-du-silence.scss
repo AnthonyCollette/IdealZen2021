@@ -1,0 +1,148 @@
+.silence {
+    &__intro {
+        padding: 100px 0 25px 0;
+        position: relative;
+        .warning {
+            position: absolute;
+            background-color: $color-008;
+            color: $color-001;
+            padding: 40px 100px;
+            left: 0;
+            bottom: 30%;
+            animation: fromLeft 1s ease-in-out;
+            &::after {
+                content: '';
+                height: 0;
+                width: 0;
+                border-right: 100px solid transparent;
+                border-bottom: 105px solid $color-008;
+                position: absolute;
+                left: 100%;
+                bottom: 0;
+                @include min($xl) {
+                    border-bottom: 120px solid $color-008;
+                }
+            }
+            i {
+                font-size: $font-lg;
+                @include min($xl) {
+                    font-size: $font-xl;
+                }
+            }
+            p {
+                display: inline-block;
+                font-size: $font-lg;
+                font-family: $font-001;
+                font-weight: 600;
+                margin: 0 10px;
+                @include min($xl) {
+                    font-size: $font-xl;
+                }
+            }
+        }
+        .container {
+            position: relative;
+            > img {
+                width: 300px;
+                margin: 400px auto 0;
+                display: block;
+            }
+        }
+        h2 {
+            background-color: $color-005;
+            position: relative;
+            padding: 20px 100px;
+            width: fit-content;
+            width: -moz-fit-content;
+            margin: 80px auto 0;
+            display: block;
+            @include min($xxxl) {
+                margin: 30px auto 0;
+            }
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border: 3px solid $color-009;
+                left: 3%;
+                bottom: 10%;
+                z-index: -1;
+            }
+        }
+    }
+    &__formation {
+        background-color: $color-006;
+        padding: 300px 0 80px 0;
+        position: relative;
+        .container {
+            position: relative;
+        }
+        &__img-wrapper {
+            position: absolute;
+            right: 40%;
+            bottom: -8%;
+            z-index: 1;
+            @include min($xl) {
+                right: 44.5%;
+                bottom: -20%;
+            }
+            @include min($xxl) {
+                right: 47.2%;
+            }
+            @include min($xxxl) {
+                right: 48%;
+            }
+            .img {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    border: 3px solid $color-007;
+                    bottom: 13%;
+                    right: 12%;
+                    z-index: -1;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &__text-wrapper {
+            max-width: 50%;
+            background-color: $color-005;
+            padding: 45px 80px;
+            position: relative;
+            margin-left: 37%;
+            z-index: 2;
+            @include min($xxxl) {
+                max-width: 40%;
+                margin-left: 40%;
+            }
+            .h1-bis {
+                @extend h1;
+                position: absolute;
+                bottom: 100%;
+                font-weight: 600;
+            }
+            &--buttons-wrapper {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                max-width: 100%;
+                margin-top: 50px;
+                color: $color-001;
+                font-size: $font-lg;
+                font-family: $font-001;
+                span {
+                    font-size: $font-md;
+                    @include min($xxl) {
+                        font-size: $font-lg;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,330 @@
+.usui {
+    &__intro {
+        padding: 100px 0;
+        .container {
+            position: relative;
+            > img {
+                position: absolute;
+                bottom: -8%;
+                right: 0;
+                @include min($xl) {
+                    bottom: 0;
+                    right: 10%;
+                }
+            }
+        }
+        h1 {
+            margin-bottom: 80px;
+            @include min($xxxl) {
+                margin-bottom: 0;
+            }
+        }
+        h2 {
+            background-color: $color-005;
+            position: relative;
+            padding: 20px 50px;
+            width: fit-content;
+            width: -moz-fit-content;
+            margin: 0 auto;
+            display: block;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border: 3px solid $color-009;
+                left: 3%;
+                bottom: 10%;
+                z-index: -1;
+            }
+        }
+        &--religion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 75px 0;
+            p {
+                font-style: italic;
+            }
+        }
+        p,
+        li {
+            color: $color-003;
+        }
+        &--text-wrapper {
+            max-width: 82%;
+        }
+        ul {
+            padding-left: 0;
+        }
+        li {
+            font-size: 16px;
+            font-family: $font-001;
+            @include min($xxl) {
+                font-size: 21px;
+            }
+            &::before {
+                content: '-';
+                margin-right: 5px;
+            }
+        }
+        .margin {
+            margin: 20px 0;
+        }
+    }
+    &__degrees {
+        background-color: $color-006;
+        padding-bottom: 400px;
+        position: relative;
+        &--bandeau {
+            max-width: 100%;
+            height: 50px;
+            background-color: $color-005;
+            position: relative;
+            z-index: 2;
+            &::before {
+                content: '';
+                position: absolute;
+                height: 0;
+                width: 650px;
+                border-top: 80px solid $color-005;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                z-index: -1;
+                top: 0%;
+                left: 50%;
+                transform: translateX(-50%);
+                @include min($xl) {
+                    border-top: 100px solid $color-005;
+                    width: 850px;
+                }
+            }
+            h2 {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 40%;
+                text-transform: uppercase;
+                width: fit-content;
+                width: -moz-fit-content;
+            }
+        }
+        &--cards-wrapper {
+            margin-top: 440px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container {
+            position: relative;
+        }
+        .warning {
+            background-color: $color-008;
+            width: 577px;
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            padding: 15px 140px;
+            text-align: center;
+            animation: ease-in-out fromRight 1.5s;
+            &::before {
+                content: '';
+                display: inline-block;
+                height: 0;
+                width: 0;
+                position: absolute;
+                right: 100%;
+                bottom: 0;
+                border-bottom: 87px solid $color-008;
+                border-left: 80px solid transparent;
+                @include min($xxl) {
+                    border-bottom: 130px solid $color-008;
+                }
+            }
+        }
+    }
+    &__presentiel {
+        padding: 50px 0 160px 0;
+        position: relative;
+        .container {
+            position: relative;
+            > img {
+                width: 350px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &--intro {
+            margin: 50px auto 270px;
+            p {
+                font-style: italic;
+                color: $color-003;
+                text-align: center;
+            }
+        }
+        &__img-wrapper {
+            position: absolute;
+            right: 48%;
+            top: 44%;
+            max-width: 100%;
+            z-index: 1;
+            @include min($lg) {
+                right: 40.6%;
+            }
+            @include min($xl) {
+                right: 45.1%;
+            }
+            @include min($xxl) {
+                right: 48%;
+            }
+            @include min($xxxl) {
+                top: 280px;
+            }
+            .img {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    border: 3px solid $color-007;
+                    bottom: 13%;
+                    right: 12%;
+                    z-index: -1;
+                }
+                img {
+                    width: 100%;
+                    @include min($xl) {
+                        width: 600px;
+                    }
+                    @include min($xxl) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &__text-wrapper {
+            max-width: 50%;
+            background-color: $color-005;
+            padding: 45px 80px;
+            position: relative;
+            margin-left: 36.3%;
+            z-index: 2;
+            @include min($xxxl) {
+                max-width: 40%;
+                margin-left: 40%;
+            }
+            .h1-bis {
+                @extend h1;
+                position: absolute;
+                bottom: 100%;
+                font-weight: 600;
+            }
+            &--buttons-wrapper {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                max-width: 100%;
+                margin-top: 50px;
+                color: $color-001;
+                font-size: $font-lg;
+                font-family: $font-001;
+                span {
+                    font-size: $font-md;
+                    @include min($xxl) {
+                        font-size: $font-lg;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card {
+    &__wrapper {
+        height: 225px;
+        position: relative;
+        max-width: 420px;
+        box-shadow: 5px 5px 5px rgba($color: $color-002, $alpha: 0.5);
+        > p {
+            font-size: $font-md;
+            max-width: 85%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 25px 30px;
+        }
+
+        .name {
+            position: absolute;
+            bottom: 335px;
+            left: -110px;
+            width: 300px;
+            height: 80px;
+            @extend h1;
+            font-size: $font-xxl;
+            font-weight: 600;
+            transform: rotate(-90deg);
+            display: inline-block;
+            background-color: $color-001;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper {
+            position: absolute;
+            bottom: 100%;
+            left: 90px;
+            height: 300px;
+            width: 290px;
+            background-repeat: no-repeat;
+            text-align: center;
+            p {
+                color: $color-003;
+                font-size: $font-md;
+                max-width: 80%;
+            }
+            .title {
+                font-size: $font-lg;
+                font-family: $font-002;
+                text-transform: uppercase;
+            }
+        }
+        .text-wrapper {
+            height: 150px;
+            background-image: url('../../images/Soustraction\ 6.png');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            .title {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &.blue-card {
+        background-color: $color-008;
+        .wrapper {
+            background-image: url('../../images/shoden-bg.png');
+            background-position: 0 80px;
+        }
+    }
+    &.green-card {
+        background-color: $color-005;
+        .wrapper {
+            background-image: url('../../images/abdulla-m-SX0m731jrAs-unsplash.png');
+            background-position-y: 20px;
+        }
+    }
+    &.red-card {
+        background-color: $color-010;
+        margin-top: 350px;
+        @include min($xxl) {
+            margin-top: 0;
+        }
+        .wrapper {
+            background-image: url('../../images/bekir-donmez-eofm5R5f9Kw-unsplash.png');
+            background-position-y: 50px;
+        }
+    }
+}

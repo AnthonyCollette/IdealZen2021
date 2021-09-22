@@ -1,5 +1,5 @@
 @mixin min($size) {
-    @media (max-width: $size) {
+    @media (min-width: $size) {
         @content;
     }
 }
