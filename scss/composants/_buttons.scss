@@ -40,3 +40,10 @@
         }
     }
 }
+
+.btn-wrapper {
+    margin-block: 20px;
+    @include min($lg) {
+        margin-block: 0;
+    }
+}

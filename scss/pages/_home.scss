@@ -24,7 +24,6 @@
 
         @include min($lg) {
             min-height: 840px;
-            // min-width: 600px;
         }
         img {
             position: absolute;
@@ -41,16 +40,7 @@
                 transform: none;
             }
             @include min($lg) {
-                left: 26%;
-            }
-            @include min($xl) {
-                left: 30%;
-            }
-            @include min($xxl) {
-                left: 34%;
-            }
-            @include min($xxxl) {
-                left: 38%;
+                left: -21%;
             }
         }
         .leaf-2 {
@@ -66,16 +56,7 @@
                 bottom: 32%;
             }
             @include min($lg) {
-                left: 32%;
-            }
-            @include min($xl) {
-                left: 35%;
-            }
-            @include min($xxl) {
-                left: 38%;
-            }
-            @include min($xxxl) {
-                left: 41%;
+                left: -2%;
             }
         }
         .leaf-3 {
@@ -87,19 +68,10 @@
             @include min($sm) {
                 transform: none;
                 left: 29%;
-                bottom: 38%;
+                bottom: 36%;
             }
             @include min($lg) {
-                left: 43%;
-            }
-            @include min($xl) {
-                left: 44%;
-            }
-            @include min($xxl) {
-                left: 45%;
-            }
-            @include min($xxxl) {
-                left: 46.5%;
+                left: 29.5%;
             }
         }
         .leaf-4 {
@@ -115,16 +87,7 @@
                 bottom: 32%;
             }
             @include min($lg) {
-                left: 44%;
-            }
-            @include min($xl) {
-                left: 45%;
-            }
-            @include min($xxl) {
-                left: 46%;
-            }
-            @include min($xxxl) {
-                left: 47%;
+                left: 33%;
             }
         }
         .leaf-5 {
@@ -135,15 +98,10 @@
             transform: scale(0.6);
             @include min($sm) {
                 transform: none;
+                left: 40.5%;
             }
             @include min($lg) {
-                left: 46%;
-            }
-            @include min($xl) {
-                left: 47%;
-            }
-            @include min($xxxl) {
-                left: 48.5%;
+                left: 40.5%;
             }
         }
         .ellipse {
@@ -157,16 +115,7 @@
                 bottom: 33%;
             }
             @include min($lg) {
-                left: 32%;
-            }
-            @include min($xl) {
-                left: 35.5%;
-            }
-            @include min($xxl) {
-                left: 38%;
-            }
-            @include min($xxxl) {
-                left: 40.5%;
+                left: -2.5%;
             }
         }
         .text-logo {
@@ -338,5 +287,59 @@
                 width: 100%;
             }
         }
+    }
+}
+
+.swiper {
+    height: 500px;
+    margin: 50px 0 100px;
+    &-slide {
+        font-size: $font-lg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $color-005;
+        p {
+            color: $color-001;
+            max-width: 75%;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                right: 100%;
+                width: 100px;
+                height: 75px;
+                background-image: url(../../images/guillemets.png);
+                background-repeat: no-repeat;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 100%;
+                width: 100px;
+                height: 75px;
+                background-image: url(../../images/guillemets.png);
+                background-repeat: no-repeat;
+                transform: rotate(180deg);
+            }
+        }
+        .author {
+            color: $color-001;
+            font-family: $font-001;
+            margin-top: 50px;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $color-001;
+    }
+    .swiper-scrollbar {
+        display: none;
+    }
+    .swiper-pagination-bullet-active {
+        background: $color-001;
     }
 }

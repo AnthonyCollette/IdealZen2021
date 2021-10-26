@@ -1,7 +1,10 @@
 .silence {
     &__intro {
-        padding: 100px 0 25px 0;
+        padding: 50px 0 25px 0;
         position: relative;
+        @include min($lg) {
+            padding: 100px 0 25px 0;
+        }
         .warning {
             position: absolute;
             background-color: $color-008;
@@ -10,15 +13,22 @@
             left: 0;
             bottom: 30%;
             animation: fromLeft 1s ease-in-out;
+            width: calc(100% - 200px);
+            text-align: center;
+            @include min($lg) {
+                width: auto;
+            }
             &::after {
-                content: '';
-                height: 0;
-                width: 0;
-                border-right: 100px solid transparent;
-                border-bottom: 105px solid $color-008;
-                position: absolute;
-                left: 100%;
-                bottom: 0;
+                @include min($lg) {
+                    content: '';
+                    height: 0;
+                    width: 0;
+                    border-right: 100px solid transparent;
+                    border-bottom: 105px solid $color-008;
+                    position: absolute;
+                    left: 100%;
+                    bottom: 0;
+                }
                 @include min($xl) {
                     border-bottom: 120px solid $color-008;
                 }
@@ -56,6 +66,9 @@
             width: -moz-fit-content;
             margin: 80px auto 0;
             display: block;
+            @include min($lg) {
+                margin: 50px auto 0;
+            }
             @include min($xxxl) {
                 margin: 30px auto 0;
             }
@@ -73,16 +86,21 @@
     }
     &__formation {
         background-color: $color-006;
-        padding: 300px 0 80px 0;
+        padding: 150px 0 80px 0;
         position: relative;
+        @include min($lg) {
+            padding: 300px 0 80px 0;
+        }
         .container {
             position: relative;
         }
         &__img-wrapper {
-            position: absolute;
-            right: 40%;
-            bottom: -8%;
             z-index: 1;
+            @include min($lg) {
+                position: absolute;
+                right: 40%;
+                bottom: -8%;
+            }
             @include min($xl) {
                 right: 44.5%;
                 bottom: -20%;
@@ -96,14 +114,16 @@
             .img {
                 position: relative;
                 &::before {
-                    content: '';
-                    position: absolute;
-                    width: 90%;
-                    height: 90%;
-                    border: 3px solid $color-007;
-                    bottom: 13%;
-                    right: 12%;
-                    z-index: -1;
+                    @include min($lg) {
+                        content: '';
+                        position: absolute;
+                        width: 90%;
+                        height: 90%;
+                        border: 3px solid $color-007;
+                        bottom: 13%;
+                        right: 12%;
+                        z-index: -1;
+                    }
                 }
             }
             img {
@@ -111,12 +131,15 @@
             }
         }
         &__text-wrapper {
-            max-width: 50%;
             background-color: $color-005;
-            padding: 45px 80px;
             position: relative;
-            margin-left: 37%;
             z-index: 2;
+            padding: 45px 40px;
+            @include min($lg) {
+                padding: 45px 80px;
+                margin-left: 37%;
+                max-width: 50%;
+            }
             @include min($xxxl) {
                 max-width: 40%;
                 margin-left: 40%;
@@ -126,16 +149,30 @@
                 position: absolute;
                 bottom: 100%;
                 font-weight: 600;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+                @include min($lg) {
+                    margin: 0;
+                    left: auto;
+                    right: auto;
+                }
             }
             &--buttons-wrapper {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 max-width: 100%;
-                margin-top: 50px;
+                margin-top: 20px;
                 color: $color-001;
                 font-size: $font-lg;
                 font-family: $font-001;
+                flex-direction: column;
+                @include min($lg) {
+                    flex-direction: row;
+                    margin-top: 50px;
+                }
                 span {
                     font-size: $font-md;
                     @include min($xxl) {

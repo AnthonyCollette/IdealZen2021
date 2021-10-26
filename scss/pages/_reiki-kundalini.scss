@@ -1,5 +1,8 @@
 .kundalini {
-    padding: 90px 0 200px 0;
+    padding: 50px 0 100px 0;
+    @include min($lg) {
+        padding: 90px 0 200px 0;
+    }
     &__intro {
         display: flex;
         flex-direction: column;
@@ -24,8 +27,11 @@
             }
         }
         .religion {
-            max-width: 47%;
-            margin: 75px auto;
+            margin: 40px 0;
+            @include min($lg) {
+                margin: 75px 0;
+                max-width: 47%;
+            }
             p {
                 font-size: $font-md;
                 color: $color-003;
@@ -41,8 +47,10 @@
             font-size: $font-md;
             color: $color-003;
             font-family: $font-001;
-            max-width: 80%;
             text-align: center;
+            @include min($lg) {
+                max-width: 80%;
+            }
             @include min($xxl) {
                 font-size: $font-lg;
             }
@@ -59,25 +67,38 @@
         display: block;
         width: 300px;
         margin: 0 auto 50px;
+        max-width: 80%;
     }
     &__text-wrapper {
-        max-width: 40%;
+        max-width: 90%;
         background-color: $color-005;
-        padding: 45px 80px;
         position: relative;
         margin: 0 auto;
+        padding: 45px 40px;
+        p {
+            text-align: center;
+        }
+        @include min($lg) {
+            max-width: 40%;
+            padding: 45px 80px;
+        }
         &--buttons-wrapper {
             display: flex;
             justify-content: space-around;
             align-items: center;
             max-width: 100%;
-            margin-top: 50px;
+            margin-top: 20px;
             color: $color-001;
             font-size: $font-lg;
             font-family: $font-001;
+            flex-direction: column;
+            @include min($lg) {
+                flex-direction: row;
+                margin-top: 50px;
+            }
             span {
                 font-size: $font-md;
-                @include min($xl) {
+                @include min($xxl) {
                     font-size: $font-lg;
                 }
             }

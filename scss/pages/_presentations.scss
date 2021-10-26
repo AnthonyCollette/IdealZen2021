@@ -14,13 +14,19 @@
         h2 {
             background-color: $color-005;
             position: relative;
-            padding: 20px 50px;
+            padding: 20px;
             width: fit-content;
             width: -moz-fit-content;
             margin: 30px auto 75px;
             display: block;
-            max-width: 30%;
+            max-width: 90%;
             text-align: center;
+            @include min($md) {
+                padding: 20px 50px;
+            }
+            @include min($lg) {
+                max-width: 30%;
+            }
             &::after {
                 content: '';
                 width: 100%;
@@ -37,32 +43,34 @@
             margin-bottom: 100px;
             position: relative;
             &::before {
-                content: '';
-                background-image: url('../../images/leafs-hover.svg');
-                background-size: cover;
-                transform: scale(-1, 1);
-                position: absolute;
-                width: 80px;
-                height: 75px;
-                right: 100%;
-                bottom: 100%;
+                @include min($sm) {
+                    content: '';
+                    background-image: url('../../images/leafs-hover.svg');
+                    background-size: cover;
+                    transform: scale(-1, 1);
+                    position: absolute;
+                    width: 80px;
+                    height: 75px;
+                    right: 100%;
+                    bottom: 100%;
+                }
             }
             &::after {
-                content: '';
-                background-image: url('../../images/leafs-hover.svg');
-                background-size: cover;
-                position: absolute;
-                width: 80px;
-                height: 75px;
-                left: 100%;
-                bottom: 100%;
+                @include min($sm) {
+                    content: '';
+                    background-image: url('../../images/leafs-hover.svg');
+                    background-size: cover;
+                    position: absolute;
+                    width: 80px;
+                    height: 75px;
+                    left: 100%;
+                    bottom: 100%;
+                }
             }
             p {
                 color: $color-003;
-                &:nth-child(1),
-                &:nth-child(4) {
-                    margin-bottom: 30px;
-                }
+
+                margin-bottom: 30px;
             }
         }
     }
@@ -71,27 +79,67 @@
 .human {
     display: flex;
     width: 100%;
-    margin-bottom: -180px;
+    margin-bottom: -260px;
+    flex-direction: column;
+    @include min($lg) {
+        flex-direction: row;
+    }
     &__orange {
         background-color: $color-010;
-        width: 65%;
-        padding: 85px 140px 200px;
+        width: 90%;
+        padding: 50px 20px;
         z-index: -1;
+        margin: 0 auto;
+        @include min($lg) {
+            margin: 0;
+            width: 50%;
+            padding: 85px 140px 300px;
+        }
     }
     &__gray {
-        width: 35%;
+        width: 90%;
         background-color: $color-004;
-        padding: 60px 140px 200px;
+        padding: 50px 20px 20vh;
         z-index: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        @include min($lg) {
+            width: 50%;
+            padding: 60px 140px 300px;
+            margin: 0;
+            align-items: flex-end;
+        }
+        @include min($xl) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+        }
         p {
             color: $color-003;
-            text-align: end;
+            text-align: center;
+            @include min($lg) {
+                text-align: end;
+            }
             &:first-of-type {
                 margin-bottom: 30px;
             }
         }
         &--italic {
             font-style: italic;
+        }
+        &--img-wrapper {
+            width: 120px;
+            max-width: 90%;
+            margin-left: 5%;
+            margin-top: 20px;
+            @include min($xl) {
+                margin-top: 0;
+            }
+            img {
+                width: 100%;
+            }
         }
     }
 }

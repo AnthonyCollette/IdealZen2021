@@ -11,23 +11,30 @@ h1 {
     display: flex;
     align-items: center;
     &::after {
-        content: '';
-        background-image: url('../../images/Groupe\ 5.png');
-        display: inline-block;
-        background-size: cover;
-        transform: rotate(-10deg);
-        width: 70px;
-        height: 65px;
+        @include min($sm) {
+            content: '';
+            background-image: url('../../images/Groupe\ 5.png');
+            display: inline-block;
+            background-size: cover;
+            transform: rotate(-10deg);
+            width: 70px;
+            height: 65px;
+        }
     }
 }
 
 h2 {
     font-family: $font-002;
-    font-size: $font-xxl;
+    font-size: $font-xl;
     color: $color-001;
+    text-align: center;
+    @include min($lg) {
+        font-size: $font-xxl;
+    }
 }
 h2.big {
     font-size: $font-xxl;
+    text-align: center;
     @include min($xl) {
         font-size: $font-xxxl;
     }

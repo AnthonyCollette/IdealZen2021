@@ -110,8 +110,11 @@ nav {
 }
 
 .sub-formations-mobile {
-    right: 100%;
-    top: 0;
+    right: 0;
+    top: 100%;
+    @include min($sm) {
+        right: 100%;
+    }
     a {
         padding: 20px;
     }
