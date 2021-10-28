@@ -2,6 +2,7 @@ h1 {
     font-family: $font-003;
     font-size: $font-xxl;
     color: $color-003;
+    font-weight: 600;
     @include min($sm) {
         font-size: $font-xxxl;
     }

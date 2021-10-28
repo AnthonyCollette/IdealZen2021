@@ -1,0 +1,66 @@
+.contact {
+    min-height: 60vh;
+    .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__infos {
+        a {
+            color: $color-008;
+        }
+    }
+    h1 {
+        @extend h2;
+        color: $color-008;
+        margin: 100px 0 50px;
+    }
+    p {
+        color: $color-003;
+    }
+    iframe {
+        margin-top: 50px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url('../../images/leafs-hover.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 60px;
+            width: 60px;
+            opacity: 0;
+            bottom: 30%;
+            right: 0%;
+            transition: 0.4s;
+            z-index: -1;
+            transform: translateX(50%);
+
+            @include min($xxl) {
+                font-size: $font-lg;
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+    &__social-media {
+        margin-top: 50px;
+        @include min($lg) {
+            margin-top: 0;
+        }
+        &--link {
+            display: flex;
+            align-items: center;
+            p {
+                margin-bottom: 0;
+            }
+        }
+        i {
+            color: $color-008;
+            font-size: 40px;
+        }
+        p {
+            margin-left: 20px;
+        }
+    }
+}

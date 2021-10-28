@@ -1,0 +1,18 @@
+.mentions {
+    .container {
+        padding-top: 100px;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    p {
+        color: $color-003;
+    }
+    article {
+        max-width: 90%;
+        margin-bottom: 50px;
+        @include min($lg) {
+            max-width: 50%;
+        }
+    }
+}

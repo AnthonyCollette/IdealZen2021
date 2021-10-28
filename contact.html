@@ -5,11 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ideal Zen</title>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="./css/main.css" />
     </head>
     <body>
@@ -53,48 +56,34 @@
                 </div>
             </div>
         </nav>
-        <section class="presentation">
+        <section class="contact">
             <div class="container">
-                <h1 class="h1">Présentation</h1>
-                <div class="presentation__intro">
-                    <h2>Thérapeute énergéticienne et Maître-enseignante Reiki</h2>
-                    <div class="presentation__intro--text-wrapper">
-                        <p>
-                            Très jeune, comme la plupart des enfants, je voyais de la magie partout. Il y avait la réalité concrète et tangible mais mon monde ne s'arrêtait pas à ce que l'on pouvait voir, sentir, toucher. Il y avait aussi tout ce que « les grands » ne voyaient pas et qui était pourtant tout aussi réel. Très tôt j'ai eu conscience de certaines énergies qui nous entourent, d'un
-                            monde subtil existant au-delà du monde physique. En grandissant j'ai commencé à me poser des questions métaphysiques, sans réussir à trouver de réponses satisfaisantes. J'ai alors ressenti une envie boulimique d'apprendre. J'ai lu, beaucoup... Sur des sujets variés (la psychologie, les spiritualités orientales, le symbolisme, les rêves, la médiumnité, … ). Je cherchais
-                            des réponses, me confrontais à de nouvelles questions, j'ai appris, expérimenté, fait des erreurs, travaillé et vécu des expériences qui m'ont conforté sur mon chemin.
-                        </p>
-                        <p>
-                            En parallèle, j'ai exercé principalement dans l'accompagnement professionnel et la formation pour adulte. Accompagner les autres, soutenir leurs projets, c'était un moteur... difficilement compatible avec des objectifs donnés en terme de profit et de rentabilité. J'avais besoin de me réaliser dans mon travail autant que dans ma vie personnelle. Je ressentais le besoin
-                            de remettre l'humain (et plus encore) au cœur de ma profession. J'ai découvert la pratique des soins reiki, qui ont été une aide considérable. Je me suis formée en 2013 et j'ai reçu l'initiation à la maîtrise en Usui Reiki Ryoho. J'ai redéfini mes priorités, quitté le monde de l'entreprise et j'ai choisi d'allier ma passion à ce qui me faisait vibrer dans mes choix
-                            professionnels.
-                        </p>
-                        <p>
-                            En recherche de simplicité et d'un retour à l'essentiel, j'ai reçu la maitrise en Reiki Usui Shiki Ryoho et Reiki Kundalini. J'ai également suivi pendant 2 ans le cursus de « La Voie du Silence », chemin empirique qui allie soins énergétiques, hypnose et enseignements mystiques occidentaux, ce qui m'a permis de me déconditionner de nombreuses croyances limitantes (même
-                            s'il en reste encore!) et à me libérer des fioritures du courant New Age.
-                        </p>
+                <div class="row">
+                    <div class="contact__infos col-lg-4">
+                        <h1>Pour prendre rendez-vous</h1>
+                        <p>Du lundi au vendredi 9h-12h / 14h-18h</p>
+                        <p>Par téléphone 06.07.64.04.05</p>
+                        <p>ou par mail <a href="mailto:contact@idealzen.fr" target="_blank">contact@idealzen.fr</a></p>
                     </div>
-                </div>
-                <img src="./images/hands-and-dots.png" alt="Mains portant un lotus" />
-            </div>
-        </section>
-        <section class="human">
-            <div class="human__orange">
-                <p>
-                    Le fil conducteur de mon parcours, c'est la rencontre humaine, celle qui se déroule au-delà du perceptible et c'est le cœur de ma pratique. J'aime l'humain dans toute sa complexité et sa richesse intérieure. Aujourd'hui je vous propose des séances enrichies de ce que j'ai appris tout au long de mon parcours, afin de vous apaiser, vous recentrer sur vos propres aspirations et
-                    vous aider à vous rencontrer vous-mêmes...
-                </p>
-            </div>
-            <div class="human__gray">
-                <div class="human__gray--text-wrapper">
-                    <p>Virginie Gembala</p>
-                    <p class="human__gray--italic">Energéticienne</p>
-                    <p class="human__gray--italic">Enseignante de La Voie du Silence</p>
-                    <p class="human__gray--italic">Maître-enseignante indépendante Reiki</p>
-                    <p class="human__gray--italic">Usui Shiki Ryoho & Reiki Kundalini</p>
-                </div>
-                <div class="human__gray--img-wrapper">
-                    <img src="./images/virginie.jpg" alt="Virginie Gembala" />
+                    <div class="contact__location col-lg-4">
+                        <h1>Pour me trouver</h1>
+                        <p>17 rue Saint-Exupery</p>
+                        <p>21160 Couchey</p>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.7795176489844!2d4.9855300162625875!3d47.26001451984776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f29bac14704987%3A0x5984b242d4ac25fa!2sIdeal%20Zen!5e0!3m2!1sfr!2sfr!4v1635348210259!5m2!1sfr!2sfr" width="320" height="280" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact__social-media col-lg-4">
+                        <h1>Pour ne rien manquer</h1>
+                        <div class="contact__social-media--link">
+                            <a href="http://instagram.com/idealzen" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                            <p>@idealzen</p>
+                        </div>
+                        <div class="contact__social-media--link">
+                            <a href="https://www.facebook.com/IdealZen21" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                            <p>/IdealZen21</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -496,6 +496,7 @@ h1, .presentiel__text-wrapper .h1-bis, .usui__presentiel__text-wrapper .h1-bis, 
   font-family: "Amatic SC";
   font-size: 39px;
   color: #707070;
+  font-weight: 600;
 }
 
 @media (min-width: 576px) {
@@ -526,7 +527,7 @@ h1, .presentiel__text-wrapper .h1-bis, .usui__presentiel__text-wrapper .h1-bis, 
   }
 }
 
-h2 {
+h2, .contact h1, .contact .presentiel__text-wrapper .h1-bis, .presentiel__text-wrapper .contact .h1-bis, .contact .usui__presentiel__text-wrapper .h1-bis, .usui__presentiel__text-wrapper .contact .h1-bis, .contact .card__wrapper .name, .card__wrapper .contact .name, .contact .silence__formation__text-wrapper .h1-bis, .silence__formation__text-wrapper .contact .h1-bis {
   font-family: "Britannic";
   font-size: 34px;
   color: #ffffff;
@@ -534,18 +535,18 @@ h2 {
 }
 
 @media (min-width: 992px) {
-  h2 {
+  h2, .contact h1, .contact .presentiel__text-wrapper .h1-bis, .presentiel__text-wrapper .contact .h1-bis, .contact .usui__presentiel__text-wrapper .h1-bis, .usui__presentiel__text-wrapper .contact .h1-bis, .contact .card__wrapper .name, .card__wrapper .contact .name, .contact .silence__formation__text-wrapper .h1-bis, .silence__formation__text-wrapper .contact .h1-bis {
     font-size: 39px;
   }
 }
 
-h2.big {
+h2.big, .contact h1.big, .contact .presentiel__text-wrapper .big.h1-bis, .presentiel__text-wrapper .contact .big.h1-bis, .contact .usui__presentiel__text-wrapper .big.h1-bis, .usui__presentiel__text-wrapper .contact .big.h1-bis, .contact .card__wrapper .big.name, .card__wrapper .contact .big.name, .contact .silence__formation__text-wrapper .big.h1-bis, .silence__formation__text-wrapper .contact .big.h1-bis {
   font-size: 39px;
   text-align: center;
 }
 
 @media (min-width: 1200px) {
-  h2.big {
+  h2.big, .contact h1.big, .contact .presentiel__text-wrapper .big.h1-bis, .presentiel__text-wrapper .contact .big.h1-bis, .contact .usui__presentiel__text-wrapper .big.h1-bis, .usui__presentiel__text-wrapper .contact .big.h1-bis, .contact .card__wrapper .big.name, .card__wrapper .contact .big.name, .contact .silence__formation__text-wrapper .big.h1-bis, .silence__formation__text-wrapper .contact .big.h1-bis {
     font-size: 55px;
   }
 }
@@ -612,10 +613,20 @@ nav .container ul li {
   margin-left: 50px;
 }
 
+nav .container ul li:hover span {
+  color: #56a8a4;
+}
+
 nav .container ul a {
   color: #929c72;
   font-size: 21px;
   font-family: "Rubik", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+nav .container ul a:hover {
+  color: #56a8a4;
 }
 
 nav .desktop-nav {
@@ -1193,8 +1204,21 @@ nav .desktop-nav__items {
 }
 
 .swiper {
-  height: 500px;
-  margin: 50px 0 100px;
+  margin: 0;
+  padding: 150px 50px 50px;
+  background-color: #f2e7d6;
+}
+
+@media (min-width: 992px) {
+  .swiper {
+    margin: 300px 0 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .swiper {
+    height: 500px;
+  }
 }
 
 .swiper-slide {
@@ -1212,56 +1236,93 @@ nav .desktop-nav__items {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #929c72;
 }
 
 .swiper-slide p {
-  color: #ffffff;
+  color: #707070;
   max-width: 75%;
   position: relative;
 }
 
-.swiper-slide p::before {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  right: 100%;
-  width: 100px;
-  height: 75px;
-  background-image: url(../../images/guillemets.png);
-  background-repeat: no-repeat;
+@media (min-width: 1200px) {
+  .swiper-slide p::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+    width: 100px;
+    height: 75px;
+    background-image: url(../../images/guillemets.png);
+    background-repeat: no-repeat;
+  }
 }
 
-.swiper-slide p::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 100%;
-  width: 100px;
-  height: 75px;
-  background-image: url(../../images/guillemets.png);
-  background-repeat: no-repeat;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+@media (min-width: 1200px) {
+  .swiper-slide p::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 100px;
+    height: 75px;
+    background-image: url(../../images/guillemets.png);
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 .swiper-slide .author {
-  color: #ffffff;
+  color: #707070;
   font-family: "Rubik", sans-serif;
   margin-top: 50px;
 }
 
+.swiper-slide .author i {
+  margin-right: 10px;
+}
+
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-  color: #ffffff;
+  color: #707070;
+}
+
+.swiper .swiper-button-prev {
+  left: 10px;
+}
+
+@media (min-width: 576px) {
+  .swiper .swiper-button-prev {
+    left: 50px;
+  }
+}
+
+.swiper .swiper-button-next {
+  right: 10px;
+}
+
+@media (min-width: 576px) {
+  .swiper .swiper-button-next {
+    right: 50px;
+  }
 }
 
 .swiper .swiper-scrollbar {
   display: none;
 }
 
+.swiper .swiper-pagination {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .swiper .swiper-pagination {
+    display: block;
+  }
+}
+
 .swiper .swiper-pagination-bullet-active {
-  background: #ffffff;
+  background: #707070;
 }
 
 footer {
@@ -1270,10 +1331,126 @@ footer {
   height: 383px;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #ffffff;
+  padding: 0 0 50px 0;
+}
+
+footer a {
+  color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+footer a:hover {
+  color: #c0ce3c;
+}
+
+footer .mentions-wrapper {
+  margin: 20px 0;
+}
+
+@media (min-width: 992px) {
+  footer .mentions-wrapper {
+    margin: 0;
+  }
+}
+
+footer .mentions-wrapper a {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+footer ul li {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+footer .col-lg-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 992px) {
+  footer .col-lg-4 {
+    width: 20vw;
+  }
+}
+
+footer .social-media-footer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .social-media-footer i {
+  font-size: 40px;
+}
+
+footer .social-media-footer a:nth-of-type(2) {
+  margin-left: 20px;
 }
 
 footer.colored-bg {
   background-color: #f9f4ec;
+}
+
+footer.background {
+  position: relative;
+}
+
+footer.background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-color: #f2e7d6;
+  z-index: -1;
+  bottom: 0;
 }
 
 .accompagnements {
@@ -1781,7 +1958,7 @@ footer.colored-bg {
 }
 
 @media (min-width: 992px) {
-  .forfaits__bandeau h2 {
+  .forfaits__bandeau h2, .forfaits__bandeau .contact h1, .contact .forfaits__bandeau h1, .forfaits__bandeau .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .forfaits__bandeau .h1-bis, .forfaits__bandeau .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .forfaits__bandeau .h1-bis, .forfaits__bandeau .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .forfaits__bandeau .h1-bis, .forfaits__bandeau .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .forfaits__bandeau .h1-bis, .forfaits__bandeau .contact .card__wrapper .name, .contact .card__wrapper .forfaits__bandeau .name, .forfaits__bandeau .card__wrapper .contact .name, .card__wrapper .contact .forfaits__bandeau .name, .forfaits__bandeau .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .forfaits__bandeau .h1-bis, .forfaits__bandeau .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .forfaits__bandeau .h1-bis {
     top: 30%;
     position: absolute;
     left: 50%;
@@ -1806,12 +1983,11 @@ footer.colored-bg {
   font-size: 21px;
   color: #707070;
   font-style: italic;
+  margin-bottom: 100px;
 }
 
 .forfaits .container .text-link-wrapper a {
   font-size: 21px;
-  color: #707070;
-  font-style: italic;
   font-family: "Rubik", sans-serif;
 }
 
@@ -2171,7 +2347,7 @@ footer.colored-bg {
   }
 }
 
-.usui__intro h2 {
+.usui__intro h2, .usui__intro .contact h1, .contact .usui__intro h1, .usui__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .usui__intro .h1-bis, .usui__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .usui__intro .h1-bis, .usui__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .usui__intro .h1-bis, .usui__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .usui__intro .h1-bis, .usui__intro .contact .card__wrapper .name, .contact .card__wrapper .usui__intro .name, .usui__intro .card__wrapper .contact .name, .card__wrapper .contact .usui__intro .name, .usui__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .usui__intro .h1-bis, .usui__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .usui__intro .h1-bis {
   background-color: #929c72;
   position: relative;
   padding: 20px 50px;
@@ -2183,7 +2359,7 @@ footer.colored-bg {
   text-align: center;
 }
 
-.usui__intro h2::after {
+.usui__intro h2::after, .usui__intro .contact h1::after, .contact .usui__intro h1::after, .usui__intro .contact .presentiel__text-wrapper .h1-bis::after, .contact .presentiel__text-wrapper .usui__intro .h1-bis::after, .usui__intro .presentiel__text-wrapper .contact .h1-bis::after, .presentiel__text-wrapper .contact .usui__intro .h1-bis::after, .usui__intro .contact .usui__presentiel__text-wrapper .h1-bis::after, .contact .usui__presentiel__text-wrapper .usui__intro .h1-bis::after, .usui__intro .usui__presentiel__text-wrapper .contact .h1-bis::after, .usui__presentiel__text-wrapper .contact .usui__intro .h1-bis::after, .usui__intro .contact .card__wrapper .name::after, .contact .card__wrapper .usui__intro .name::after, .usui__intro .card__wrapper .contact .name::after, .card__wrapper .contact .usui__intro .name::after, .usui__intro .contact .silence__formation__text-wrapper .h1-bis::after, .contact .silence__formation__text-wrapper .usui__intro .h1-bis::after, .usui__intro .silence__formation__text-wrapper .contact .h1-bis::after, .silence__formation__text-wrapper .contact .usui__intro .h1-bis::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -2316,7 +2492,7 @@ footer.colored-bg {
   }
 }
 
-.usui__degrees--bandeau h2 {
+.usui__degrees--bandeau h2, .usui__degrees--bandeau .contact h1, .contact .usui__degrees--bandeau h1, .usui__degrees--bandeau .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .contact .card__wrapper .name, .contact .card__wrapper .usui__degrees--bandeau .name, .usui__degrees--bandeau .card__wrapper .contact .name, .card__wrapper .contact .usui__degrees--bandeau .name, .usui__degrees--bandeau .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .usui__degrees--bandeau .h1-bis {
   text-transform: uppercase;
   width: -webkit-fit-content;
   width: fit-content;
@@ -2324,7 +2500,7 @@ footer.colored-bg {
 }
 
 @media (min-width: 992px) {
-  .usui__degrees--bandeau h2 {
+  .usui__degrees--bandeau h2, .usui__degrees--bandeau .contact h1, .contact .usui__degrees--bandeau h1, .usui__degrees--bandeau .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .contact .card__wrapper .name, .contact .card__wrapper .usui__degrees--bandeau .name, .usui__degrees--bandeau .card__wrapper .contact .name, .card__wrapper .contact .usui__degrees--bandeau .name, .usui__degrees--bandeau .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .usui__degrees--bandeau .h1-bis, .usui__degrees--bandeau .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .usui__degrees--bandeau .h1-bis {
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2799,7 +2975,7 @@ footer.colored-bg {
           align-items: center;
 }
 
-.kundalini__intro h2 {
+.kundalini__intro h2, .kundalini__intro .contact h1, .contact .kundalini__intro h1, .kundalini__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .kundalini__intro .h1-bis, .kundalini__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .kundalini__intro .h1-bis, .kundalini__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .kundalini__intro .h1-bis, .kundalini__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .kundalini__intro .h1-bis, .kundalini__intro .contact .card__wrapper .name, .contact .card__wrapper .kundalini__intro .name, .kundalini__intro .card__wrapper .contact .name, .card__wrapper .contact .kundalini__intro .name, .kundalini__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .kundalini__intro .h1-bis, .kundalini__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .kundalini__intro .h1-bis {
   background-color: #929c72;
   position: relative;
   padding: 20px 100px;
@@ -2810,7 +2986,7 @@ footer.colored-bg {
   display: block;
 }
 
-.kundalini__intro h2::after {
+.kundalini__intro h2::after, .kundalini__intro .contact h1::after, .contact .kundalini__intro h1::after, .kundalini__intro .contact .presentiel__text-wrapper .h1-bis::after, .contact .presentiel__text-wrapper .kundalini__intro .h1-bis::after, .kundalini__intro .presentiel__text-wrapper .contact .h1-bis::after, .presentiel__text-wrapper .contact .kundalini__intro .h1-bis::after, .kundalini__intro .contact .usui__presentiel__text-wrapper .h1-bis::after, .contact .usui__presentiel__text-wrapper .kundalini__intro .h1-bis::after, .kundalini__intro .usui__presentiel__text-wrapper .contact .h1-bis::after, .usui__presentiel__text-wrapper .contact .kundalini__intro .h1-bis::after, .kundalini__intro .contact .card__wrapper .name::after, .contact .card__wrapper .kundalini__intro .name::after, .kundalini__intro .card__wrapper .contact .name::after, .card__wrapper .contact .kundalini__intro .name::after, .kundalini__intro .contact .silence__formation__text-wrapper .h1-bis::after, .contact .silence__formation__text-wrapper .kundalini__intro .h1-bis::after, .kundalini__intro .silence__formation__text-wrapper .contact .h1-bis::after, .silence__formation__text-wrapper .contact .kundalini__intro .h1-bis::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -3023,7 +3199,7 @@ footer.colored-bg {
   display: block;
 }
 
-.silence__intro h2 {
+.silence__intro h2, .silence__intro .contact h1, .contact .silence__intro h1, .silence__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .silence__intro .h1-bis, .silence__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .silence__intro .h1-bis, .silence__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .silence__intro .h1-bis, .silence__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .silence__intro .h1-bis, .silence__intro .contact .card__wrapper .name, .contact .card__wrapper .silence__intro .name, .silence__intro .card__wrapper .contact .name, .card__wrapper .contact .silence__intro .name, .silence__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .silence__intro .h1-bis, .silence__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .silence__intro .h1-bis {
   background-color: #929c72;
   position: relative;
   padding: 20px 100px;
@@ -3035,18 +3211,18 @@ footer.colored-bg {
 }
 
 @media (min-width: 992px) {
-  .silence__intro h2 {
+  .silence__intro h2, .silence__intro .contact h1, .contact .silence__intro h1, .silence__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .silence__intro .h1-bis, .silence__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .silence__intro .h1-bis, .silence__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .silence__intro .h1-bis, .silence__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .silence__intro .h1-bis, .silence__intro .contact .card__wrapper .name, .contact .card__wrapper .silence__intro .name, .silence__intro .card__wrapper .contact .name, .card__wrapper .contact .silence__intro .name, .silence__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .silence__intro .h1-bis, .silence__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .silence__intro .h1-bis {
     margin: 50px auto 0;
   }
 }
 
 @media (min-width: 1815px) {
-  .silence__intro h2 {
+  .silence__intro h2, .silence__intro .contact h1, .contact .silence__intro h1, .silence__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .silence__intro .h1-bis, .silence__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .silence__intro .h1-bis, .silence__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .silence__intro .h1-bis, .silence__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .silence__intro .h1-bis, .silence__intro .contact .card__wrapper .name, .contact .card__wrapper .silence__intro .name, .silence__intro .card__wrapper .contact .name, .card__wrapper .contact .silence__intro .name, .silence__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .silence__intro .h1-bis, .silence__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .silence__intro .h1-bis {
     margin: 30px auto 0;
   }
 }
 
-.silence__intro h2::after {
+.silence__intro h2::after, .silence__intro .contact h1::after, .contact .silence__intro h1::after, .silence__intro .contact .presentiel__text-wrapper .h1-bis::after, .contact .presentiel__text-wrapper .silence__intro .h1-bis::after, .silence__intro .presentiel__text-wrapper .contact .h1-bis::after, .presentiel__text-wrapper .contact .silence__intro .h1-bis::after, .silence__intro .contact .usui__presentiel__text-wrapper .h1-bis::after, .contact .usui__presentiel__text-wrapper .silence__intro .h1-bis::after, .silence__intro .usui__presentiel__text-wrapper .contact .h1-bis::after, .usui__presentiel__text-wrapper .contact .silence__intro .h1-bis::after, .silence__intro .contact .card__wrapper .name::after, .contact .card__wrapper .silence__intro .name::after, .silence__intro .card__wrapper .contact .name::after, .card__wrapper .contact .silence__intro .name::after, .silence__intro .contact .silence__formation__text-wrapper .h1-bis::after, .contact .silence__formation__text-wrapper .silence__intro .h1-bis::after, .silence__intro .silence__formation__text-wrapper .contact .h1-bis::after, .silence__formation__text-wrapper .contact .silence__intro .h1-bis::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -3228,7 +3404,7 @@ footer.colored-bg {
           align-items: center;
 }
 
-.presentation__intro h2 {
+.presentation__intro h2, .presentation__intro .contact h1, .contact .presentation__intro h1, .presentation__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .presentation__intro .h1-bis, .presentation__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .presentation__intro .h1-bis, .presentation__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .presentation__intro .h1-bis, .presentation__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .presentation__intro .h1-bis, .presentation__intro .contact .card__wrapper .name, .contact .card__wrapper .presentation__intro .name, .presentation__intro .card__wrapper .contact .name, .card__wrapper .contact .presentation__intro .name, .presentation__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .presentation__intro .h1-bis, .presentation__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .presentation__intro .h1-bis {
   background-color: #929c72;
   position: relative;
   padding: 20px;
@@ -3242,18 +3418,18 @@ footer.colored-bg {
 }
 
 @media (min-width: 768px) {
-  .presentation__intro h2 {
+  .presentation__intro h2, .presentation__intro .contact h1, .contact .presentation__intro h1, .presentation__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .presentation__intro .h1-bis, .presentation__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .presentation__intro .h1-bis, .presentation__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .presentation__intro .h1-bis, .presentation__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .presentation__intro .h1-bis, .presentation__intro .contact .card__wrapper .name, .contact .card__wrapper .presentation__intro .name, .presentation__intro .card__wrapper .contact .name, .card__wrapper .contact .presentation__intro .name, .presentation__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .presentation__intro .h1-bis, .presentation__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .presentation__intro .h1-bis {
     padding: 20px 50px;
   }
 }
 
 @media (min-width: 992px) {
-  .presentation__intro h2 {
+  .presentation__intro h2, .presentation__intro .contact h1, .contact .presentation__intro h1, .presentation__intro .contact .presentiel__text-wrapper .h1-bis, .contact .presentiel__text-wrapper .presentation__intro .h1-bis, .presentation__intro .presentiel__text-wrapper .contact .h1-bis, .presentiel__text-wrapper .contact .presentation__intro .h1-bis, .presentation__intro .contact .usui__presentiel__text-wrapper .h1-bis, .contact .usui__presentiel__text-wrapper .presentation__intro .h1-bis, .presentation__intro .usui__presentiel__text-wrapper .contact .h1-bis, .usui__presentiel__text-wrapper .contact .presentation__intro .h1-bis, .presentation__intro .contact .card__wrapper .name, .contact .card__wrapper .presentation__intro .name, .presentation__intro .card__wrapper .contact .name, .card__wrapper .contact .presentation__intro .name, .presentation__intro .contact .silence__formation__text-wrapper .h1-bis, .contact .silence__formation__text-wrapper .presentation__intro .h1-bis, .presentation__intro .silence__formation__text-wrapper .contact .h1-bis, .silence__formation__text-wrapper .contact .presentation__intro .h1-bis {
     max-width: 30%;
   }
 }
 
-.presentation__intro h2::after {
+.presentation__intro h2::after, .presentation__intro .contact h1::after, .contact .presentation__intro h1::after, .presentation__intro .contact .presentiel__text-wrapper .h1-bis::after, .contact .presentiel__text-wrapper .presentation__intro .h1-bis::after, .presentation__intro .presentiel__text-wrapper .contact .h1-bis::after, .presentiel__text-wrapper .contact .presentation__intro .h1-bis::after, .presentation__intro .contact .usui__presentiel__text-wrapper .h1-bis::after, .contact .usui__presentiel__text-wrapper .presentation__intro .h1-bis::after, .presentation__intro .usui__presentiel__text-wrapper .contact .h1-bis::after, .usui__presentiel__text-wrapper .contact .presentation__intro .h1-bis::after, .presentation__intro .contact .card__wrapper .name::after, .contact .card__wrapper .presentation__intro .name::after, .presentation__intro .card__wrapper .contact .name::after, .card__wrapper .contact .presentation__intro .name::after, .presentation__intro .contact .silence__formation__text-wrapper .h1-bis::after, .contact .silence__formation__text-wrapper .presentation__intro .h1-bis::after, .presentation__intro .silence__formation__text-wrapper .contact .h1-bis::after, .silence__formation__text-wrapper .contact .presentation__intro .h1-bis::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -3418,4 +3594,120 @@ footer.colored-bg {
 
 .human__gray--img-wrapper img {
   width: 100%;
+}
+
+.contact {
+  min-height: 60vh;
+}
+
+.contact .col-lg-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact__infos a {
+  color: #56a8a4;
+}
+
+.contact h1, .contact .presentiel__text-wrapper .h1-bis, .presentiel__text-wrapper .contact .h1-bis, .contact .usui__presentiel__text-wrapper .h1-bis, .usui__presentiel__text-wrapper .contact .h1-bis, .contact .card__wrapper .name, .card__wrapper .contact .name, .contact .silence__formation__text-wrapper .h1-bis, .silence__formation__text-wrapper .contact .h1-bis {
+  color: #56a8a4;
+  margin: 100px 0 50px;
+}
+
+.contact p {
+  color: #707070;
+}
+
+.contact iframe {
+  margin-top: 50px;
+  position: relative;
+}
+
+.contact iframe::after {
+  position: absolute;
+  content: '';
+  background-image: url("../../images/leafs-hover.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 60px;
+  opacity: 0;
+  bottom: 30%;
+  right: 0%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+@media (min-width: 1400px) {
+  .contact iframe::after {
+    font-size: 21px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.contact__social-media {
+  margin-top: 50px;
+}
+
+@media (min-width: 992px) {
+  .contact__social-media {
+    margin-top: 0;
+  }
+}
+
+.contact__social-media--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__social-media--link p {
+  margin-bottom: 0;
+}
+
+.contact__social-media i {
+  color: #56a8a4;
+  font-size: 40px;
+}
+
+.contact__social-media p {
+  margin-left: 20px;
+}
+
+.mentions .container {
+  padding-top: 100px;
+}
+
+.mentions h1, .mentions .presentiel__text-wrapper .h1-bis, .presentiel__text-wrapper .mentions .h1-bis, .mentions .usui__presentiel__text-wrapper .h1-bis, .usui__presentiel__text-wrapper .mentions .h1-bis, .mentions .card__wrapper .name, .card__wrapper .mentions .name, .mentions .silence__formation__text-wrapper .h1-bis, .silence__formation__text-wrapper .mentions .h1-bis {
+  margin-bottom: 20px;
+}
+
+.mentions p {
+  color: #707070;
+}
+
+.mentions article {
+  max-width: 90%;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  .mentions article {
+    max-width: 50%;
+  }
 }

@@ -291,55 +291,86 @@
 }
 
 .swiper {
-    height: 500px;
-    margin: 50px 0 100px;
+    margin: 0;
+    @include min($lg) {
+        margin: 300px 0 0;
+    }
+    padding: 150px 50px 50px;
+    background-color: $color-004;
+    @include min($lg) {
+        height: 500px;
+    }
     &-slide {
         font-size: $font-lg;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: $color-005;
         p {
-            color: $color-001;
+            color: $color-003;
             max-width: 75%;
             position: relative;
             &::before {
-                content: '';
-                position: absolute;
-                bottom: 100%;
-                right: 100%;
-                width: 100px;
-                height: 75px;
-                background-image: url(../../images/guillemets.png);
-                background-repeat: no-repeat;
+                @include min($xl) {
+                    content: '';
+                    position: absolute;
+                    bottom: 100%;
+                    right: 100%;
+                    width: 100px;
+                    height: 75px;
+                    background-image: url(../../images/guillemets.png);
+                    background-repeat: no-repeat;
+                }
             }
             &::after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                left: 100%;
-                width: 100px;
-                height: 75px;
-                background-image: url(../../images/guillemets.png);
-                background-repeat: no-repeat;
-                transform: rotate(180deg);
+                @include min($xl) {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 100%;
+                    width: 100px;
+                    height: 75px;
+                    background-image: url(../../images/guillemets.png);
+                    background-repeat: no-repeat;
+                    transform: rotate(180deg);
+                }
             }
         }
         .author {
-            color: $color-001;
+            color: $color-003;
             font-family: $font-001;
             margin-top: 50px;
+            i {
+                margin-right: 10px;
+            }
         }
     }
     .swiper-button-prev,
     .swiper-button-next {
-        color: $color-001;
+        color: $color-003;
+    }
+    .swiper-button-prev {
+        left: 10px;
+        @include min($sm) {
+            left: 50px;
+        }
+    }
+    .swiper-button-next {
+        right: 10px;
+        @include min($sm) {
+            right: 50px;
+        }
     }
     .swiper-scrollbar {
         display: none;
     }
+    .swiper-pagination {
+        display: none;
+        @include min($lg) {
+            display: block;
+        }
+    }
     .swiper-pagination-bullet-active {
-        background: $color-001;
+        background: $color-003;
     }
 }

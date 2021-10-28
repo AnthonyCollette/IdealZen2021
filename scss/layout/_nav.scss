@@ -11,11 +11,20 @@ nav {
         ul {
             li {
                 margin-left: 50px;
+                &:hover {
+                    span {
+                        color: $color-008;
+                    }
+                }
             }
             a {
                 color: $color-005;
                 font-size: 21px;
                 font-family: $font-001;
+                transition: 0.4s;
+                &:hover {
+                    color: $color-008;
+                }
             }
         }
     }
